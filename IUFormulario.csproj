@@ -7,8 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj" />
-    <ProjectReference Include="..\Modelo\Modelo.csproj" />
+    <Compile Remove="LogicaNegocio\**" />
+    <Compile Remove="Modelo\**" />
+    <EmbeddedResource Remove="LogicaNegocio\**" />
+    <EmbeddedResource Remove="Modelo\**" />
+    <None Remove="LogicaNegocio\**" />
+    <None Remove="Modelo\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="LogicaNegocio\LogicaNegocio.csproj" />
+    <ProjectReference Include="Modelo\Modelo.csproj" />
   </ItemGroup>
 
 </Project>
