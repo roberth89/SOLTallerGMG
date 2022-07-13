@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jyXCzfmsObLZm61F1llJ/RXQHqjbgZFgm4sSrioFMpXghKj/fGtMpUcdeR5ZQwZ5r0TfTMwWXxmh/votBDe9Fw==",
+  "success": true,
+  "projectFilePath": "F:\\TallerGrupoMonge\\TallerGrupoMongeUNI\\IUFormulario.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MSI\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.26\\microsoft.netcore.app.host.win-x64.3.1.26.nupkg.sha512"
+  ],
+  "logs": []
+}
