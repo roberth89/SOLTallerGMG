@@ -35,6 +35,10 @@
             this.txtConsultaDinero = new System.Windows.Forms.TextBox();
             this.TxtMensajeInformativo = new System.Windows.Forms.TextBox();
             this.LblTituloMensaje = new System.Windows.Forms.Label();
+            this.BtnArray = new System.Windows.Forms.Button();
+            this.TxtResultadoArray = new System.Windows.Forms.TextBox();
+            this.TxtResultadoList = new System.Windows.Forms.TextBox();
+            this.BtnList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConsultar
@@ -91,7 +95,7 @@
             this.TxtMensajeInformativo.Name = "TxtMensajeInformativo";
             this.TxtMensajeInformativo.Size = new System.Drawing.Size(399, 62);
             this.TxtMensajeInformativo.TabIndex = 5;
-            this.TxtMensajeInformativo.Text = "Hola Mundo";
+            this.TxtMensajeInformativo.Text = "BIP BOP, ";
             // 
             // LblTituloMensaje
             // 
@@ -102,11 +106,51 @@
             this.LblTituloMensaje.TabIndex = 6;
             this.LblTituloMensaje.Text = "Mensaje Cajero:";
             // 
+            // BtnArray
+            // 
+            this.BtnArray.Location = new System.Drawing.Point(13, 220);
+            this.BtnArray.Name = "BtnArray";
+            this.BtnArray.Size = new System.Drawing.Size(90, 23);
+            this.BtnArray.TabIndex = 7;
+            this.BtnArray.Text = "Ejemplo Array";
+            this.BtnArray.UseVisualStyleBackColor = true;
+            this.BtnArray.Click += new System.EventHandler(this.BtnArray_Click);
+            // 
+            // TxtResultadoArray
+            // 
+            this.TxtResultadoArray.Location = new System.Drawing.Point(109, 220);
+            this.TxtResultadoArray.Multiline = true;
+            this.TxtResultadoArray.Name = "TxtResultadoArray";
+            this.TxtResultadoArray.Size = new System.Drawing.Size(302, 23);
+            this.TxtResultadoArray.TabIndex = 8;
+            // 
+            // TxtResultadoList
+            // 
+            this.TxtResultadoList.Location = new System.Drawing.Point(109, 258);
+            this.TxtResultadoList.Multiline = true;
+            this.TxtResultadoList.Name = "TxtResultadoList";
+            this.TxtResultadoList.Size = new System.Drawing.Size(302, 23);
+            this.TxtResultadoList.TabIndex = 10;
+            // 
+            // BtnList
+            // 
+            this.BtnList.Location = new System.Drawing.Point(13, 258);
+            this.BtnList.Name = "BtnList";
+            this.BtnList.Size = new System.Drawing.Size(90, 23);
+            this.BtnList.TabIndex = 9;
+            this.BtnList.Text = "Ejemplo List";
+            this.BtnList.UseVisualStyleBackColor = true;
+            this.BtnList.Click += new System.EventHandler(this.BtnList_Click);
+            // 
             // FrmTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 239);
+            this.ClientSize = new System.Drawing.Size(449, 358);
+            this.Controls.Add(this.TxtResultadoList);
+            this.Controls.Add(this.BtnList);
+            this.Controls.Add(this.TxtResultadoArray);
+            this.Controls.Add(this.BtnArray);
             this.Controls.Add(this.LblTituloMensaje);
             this.Controls.Add(this.TxtMensajeInformativo);
             this.Controls.Add(this.txtConsultaDinero);
@@ -115,7 +159,7 @@
             this.Controls.Add(this.btnRetirarDinero);
             this.Controls.Add(this.btnConsultar);
             this.Name = "FrmTaller";
-            this.Text = "FrmTaller";
+            this.Text = "Cajero";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +174,9 @@
         private System.Windows.Forms.TextBox txtConsultaDinero;
         private System.Windows.Forms.TextBox TxtMensajeInformativo;
         private System.Windows.Forms.Label LblTituloMensaje;
+        private System.Windows.Forms.Button BtnArray;
+        private System.Windows.Forms.TextBox TxtResultadoArray;
+        private System.Windows.Forms.TextBox TxtResultadoList;
+        private System.Windows.Forms.Button BtnList;
     }
 }

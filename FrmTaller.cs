@@ -15,6 +15,8 @@ namespace TallerGrupoMongeUNI
 
         private string _logErrores = string.Empty;
 
+        private const string SEPARADOR = "--";
+
         public FrmTaller()
         {
             InitializeComponent();
@@ -43,10 +45,7 @@ namespace TallerGrupoMongeUNI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                //throw ex;
             }
-
-
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -66,6 +65,69 @@ namespace TallerGrupoMongeUNI
             txtConsultaDinero.Text = _objVariable.DineroActual.ToString();
         }
 
+        private void BtnArray_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var resultado = LlamarPrueba();
+                string mensaje = string.Empty;
 
+                for (int i = 0; i < resultado.Length; i++)
+                {
+                    mensaje += SEPARADOR + resultado[i];
+
+                }
+                TxtResultadoArray.Text = mensaje;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private string[] LlamarPrueba()
+        {
+            try
+            {
+                return LogicaNegocio.Lista.ListaArray();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        private void BtnList_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<string> resultadoList = LlamarPruebaList();
+                string mensaje = string.Empty;
+
+                foreach (var item in resultadoList)
+                {
+                    mensaje += SEPARADOR + item.ToString();
+                }
+                TxtResultadoList.Text = mensaje;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private List<string> LlamarPruebaList()
+        {
+            try
+            {
+                return LogicaNegocio.Lista.ListEjemplo();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
