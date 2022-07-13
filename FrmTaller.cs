@@ -187,5 +187,23 @@ namespace TallerGrupoMongeUNI
                 throw ex;
             }
         }
+
+        private void btnGeneric_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LlamarGenericos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LlamarGenericos()
+        {
+            LogicaNegocio.TestGenericList pruebaGenericos = new LogicaNegocio.TestGenericList();
+            pruebaGenericos.PruebaListasGenericas();
+        }
     }
 }
