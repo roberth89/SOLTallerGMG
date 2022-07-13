@@ -11,26 +11,17 @@ namespace TallerGrupoMongeUNI
     public partial class FrmTaller : Form
     {
 
-        public LogicaNegocio.Variable objVariable = new LogicaNegocio.Variable();
+        public LogicaNegocio.Cajero _objVariable = new LogicaNegocio.Cajero();
 
         private string _logErrores = string.Empty;
 
         public FrmTaller()
         {
             InitializeComponent();
-
-
         }
-
-        private void btnListas_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void btnVariable_Click(object sender, EventArgs e)
         {
-            // Prueba Git
             try
             {
                 try
@@ -43,12 +34,11 @@ namespace TallerGrupoMongeUNI
                     _logErrores = _logErrores + "/ " + ex.Message;
                     lblError.Text = _logErrores;
                 }
-                var referencia = "Prueba Referencia ";
-                var resultado = objVariable.ObtenerContador(ref referencia);
-                MessageBox.Show("Valor de Referencia: " + referencia); 
-                MessageBox.Show("Se obtiene contador de clase: " + resultado);
-                var resultadoEstatico = LogicaNegocio.VariableEstatica.ObtenerContador();
-                MessageBox.Show("Se obtiene contador de clase Estatica: " + resultadoEstatico);
+                var dineroRetirar = Convert.ToDecimal(txtMontoRetirar.Text);
+                var referencia = string.Empty;
+                var resultadoDinero = _objVariable.RetirarDinero(dineroRetirar, ref referencia);
+                TxtMensajeInformativo.Text = referencia;
+                RefrescarSaldo();
             }
             catch (Exception ex)
             {
@@ -58,5 +48,24 @@ namespace TallerGrupoMongeUNI
 
 
         }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RefrescarSaldo();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void RefrescarSaldo()
+        {
+            txtConsultaDinero.Text = _objVariable.DineroActual.ToString();
+        }
+
+
     }
 }
