@@ -17,9 +17,65 @@ namespace TallerGrupoMongeUNI
 
         private const string SEPARADOR = "--";
 
+        private List<Modelo.Persona> personas = new List<Modelo.Persona>();
+
         public FrmTaller()
         {
             InitializeComponent();
+        }
+
+        private void LimpiarTextoPersonas()
+        {
+            TxtPersonas.Text = String.Empty;
+        }
+
+        private void AsignarTextPersonasLista()
+        {
+            try
+            {
+                foreach (var item in personas)
+                {
+                    TxtPersonas.Text += item.Identificación + " ";
+                    TxtPersonas.Text += item.FechaTransaccion.ToString() + " ";
+                    TxtPersonas.Text += item.Nombre + " " + item.PrimerApellido + " " + item.SegundoApellido;
+                    TxtPersonas.Text += item.MontoTransaccion.ToString();
+                    TxtPersonas.Text += item.Mensaje;
+                    TxtPersonas.Text += "\n";
+
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void AgregarEventoPersonas(decimal montoRetirar, string mensaje)
+        {
+            try
+            {
+                LimpiarTextoPersonas();
+                DateTime fechaTransaccion = DateTime.Now;
+                // Crear instancia de persona y asignarle valores.
+                Modelo.Persona objPersona = new Modelo.Persona
+                {
+                    Identificación = TxtIdentificacion.Text,
+                    Nombre = txtNombre.Text,
+                    PrimerApellido = txtApellido1.Text,
+                    SegundoApellido = TxtApellido2.Text,
+                    FechaTransaccion = fechaTransaccion,
+                    MontoTransaccion = montoRetirar,
+                    Mensaje = mensaje
+                };
+
+                // Agregar ese objeto Persona a la lista de personas.
+                personas.Add(objPersona);
+                AsignarTextPersonasLista();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void btnVariable_Click(object sender, EventArgs e)
@@ -40,6 +96,8 @@ namespace TallerGrupoMongeUNI
                 var referencia = string.Empty;
                 var resultadoDinero = _objVariable.RetirarDinero(dineroRetirar, ref referencia);
                 TxtMensajeInformativo.Text = referencia;
+                // Agregamos a la persona 
+                AgregarEventoPersonas(dineroRetirar, referencia);
                 RefrescarSaldo();
             }
             catch (Exception ex)
