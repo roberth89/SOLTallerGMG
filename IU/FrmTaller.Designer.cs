@@ -51,6 +51,7 @@
             this.LblIdentificacion = new System.Windows.Forms.Label();
             this.btnGeneric = new System.Windows.Forms.Button();
             this.btnGenerico = new System.Windows.Forms.Button();
+            this.BtnLinkedList = new System.Windows.Forms.Button();
             this.GPBXPractica.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,7 +169,7 @@
             this.GPBXPractica.Controls.Add(this.txtMontoRetirar);
             this.GPBXPractica.Controls.Add(this.LblIdentificacion);
             this.GPBXPractica.Controls.Add(this.btnRetirarDinero);
-            this.GPBXPractica.Location = new System.Drawing.Point(11, 271);
+            this.GPBXPractica.Location = new System.Drawing.Point(14, 298);
             this.GPBXPractica.Name = "GPBXPractica";
             this.GPBXPractica.Size = new System.Drawing.Size(573, 272);
             this.GPBXPractica.TabIndex = 11;
@@ -209,7 +210,7 @@
             // 
             // TxtPersonas
             // 
-            this.TxtPersonas.Location = new System.Drawing.Point(6, 130);
+            this.TxtPersonas.Location = new System.Drawing.Point(15, 172);
             this.TxtPersonas.Multiline = true;
             this.TxtPersonas.Name = "TxtPersonas";
             this.TxtPersonas.Size = new System.Drawing.Size(561, 136);
@@ -271,11 +272,22 @@
             this.btnGenerico.UseVisualStyleBackColor = true;
             this.btnGenerico.Click += new System.EventHandler(this.btnGenerico_Click);
             // 
+            // BtnLinkedList
+            // 
+            this.BtnLinkedList.Location = new System.Drawing.Point(14, 260);
+            this.BtnLinkedList.Name = "BtnLinkedList";
+            this.BtnLinkedList.Size = new System.Drawing.Size(120, 23);
+            this.BtnLinkedList.TabIndex = 14;
+            this.BtnLinkedList.Text = "Ejemplo LinkedList";
+            this.BtnLinkedList.UseVisualStyleBackColor = true;
+            this.BtnLinkedList.Click += new System.EventHandler(this.BtnLinkedList_Click);
+            // 
             // FrmTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 567);
+            this.ClientSize = new System.Drawing.Size(599, 591);
+            this.Controls.Add(this.BtnLinkedList);
             this.Controls.Add(this.btnGenerico);
             this.Controls.Add(this.btnGeneric);
             this.Controls.Add(this.GPBXPractica);
@@ -322,5 +334,6 @@
         private System.Windows.Forms.Label LblIdentificacion;
         private System.Windows.Forms.Button btnGeneric;
         private System.Windows.Forms.Button btnGenerico;
+        private System.Windows.Forms.Button BtnLinkedList;
     }
 }

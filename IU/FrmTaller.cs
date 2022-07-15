@@ -308,6 +308,23 @@ namespace TallerGrupoMongeUNI
 
         }
 
+        private void BtnLinkedList_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var objLinkedListEjemplo = LogicaNegocio.Lista.LinkedListEjemplo();
 
+            
+                var objColas = LogicaNegocio.Lista.Colas();
+
+                var objPilas = LogicaNegocio.Lista.Pilas();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
