@@ -114,6 +114,31 @@ namespace TallerGrupoMongeUNI
             }
             catch (Exception ex)
             {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 MessageBox.Show(ex.Message);
             }
         }
@@ -192,7 +217,7 @@ namespace TallerGrupoMongeUNI
         {
             try
             {
-                LlamarGenericos();
+                LlamarEjemploNoGenerico();
             }
             catch (Exception ex)
             {
@@ -200,10 +225,89 @@ namespace TallerGrupoMongeUNI
             }
         }
 
-        private void LlamarGenericos()
+
+        private void btnGenerico_Click(object sender, EventArgs e)
         {
-            LogicaNegocio.TestGenericList pruebaGenericos = new LogicaNegocio.TestGenericList();
-            pruebaGenericos.PruebaListasGenericas();
+            try
+            {
+                // ok
+                LlamarEjemploGenerico();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
+
+        private void LlamarEjemploGenerico()
+        {
+            try
+            {
+                LogicaNegocio.AlmacenaObjetoGeneric<string> almacenaObjetoGeneric = new LogicaNegocio.AlmacenaObjetoGeneric<string>(4);
+                almacenaObjetoGeneric.Agregar("Roberto");
+                almacenaObjetoGeneric.Agregar("Fernando");
+                almacenaObjetoGeneric.Agregar("Ray");
+                almacenaObjetoGeneric.Agregar("Nestor");
+
+                string nombre = almacenaObjetoGeneric.getElemento(1);
+                MessageBox.Show(nombre);
+
+                LogicaNegocio.AlmacenaObjetoGeneric<Modelo.Persona> almacenaObjetoGeneric2 = new LogicaNegocio.AlmacenaObjetoGeneric<Modelo.Persona>(4);
+
+                almacenaObjetoGeneric2.Agregar(new Modelo.Persona { Identificación = "01", Nombre = "Roberto" });
+                almacenaObjetoGeneric2.Agregar(new Modelo.Persona { Identificación = "02", Nombre = "Fernando" });
+                almacenaObjetoGeneric2.Agregar(new Modelo.Persona { Identificación = "03", Nombre = "Ray" });
+                almacenaObjetoGeneric2.Agregar(new Modelo.Persona { Identificación = "04", Nombre = "Nestor" });
+
+                Modelo.Persona objPersona = almacenaObjetoGeneric2.getElemento(1);
+
+                MessageBox.Show(objPersona.Identificación + " " + objPersona.Nombre);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+
+        private void LlamarEjemploNoGenerico()
+        {
+
+            try
+            {
+                LogicaNegocio.AlmacenaObjetoNormal objAlmacenaObjetoNormal = new LogicaNegocio.AlmacenaObjetoNormal(4);
+
+                objAlmacenaObjetoNormal.Agregar("Roberto");
+                objAlmacenaObjetoNormal.Agregar("Fernando");
+                objAlmacenaObjetoNormal.Agregar("Ray");
+                objAlmacenaObjetoNormal.Agregar("Nestor");
+
+                // Primer inconveniente, problema de casting , 
+                string nombrePersona = (string)objAlmacenaObjetoNormal.getElemento(1);
+                MessageBox.Show(nombrePersona);
+
+                LogicaNegocio.AlmacenaObjetoNormal objAlmacenaObjetoNormal2 = new LogicaNegocio.AlmacenaObjetoNormal(4);
+
+                objAlmacenaObjetoNormal2.Agregar(new Modelo.Persona { Identificación = "01", Nombre = "Roberto" });
+                objAlmacenaObjetoNormal2.Agregar(new Modelo.Persona { Identificación = "02", Nombre = "Fernando" });
+                objAlmacenaObjetoNormal2.Agregar(new Modelo.Persona { Identificación = "03", Nombre = "Ray" });
+                objAlmacenaObjetoNormal2.Agregar(new Modelo.Persona { Identificación = "04", Nombre = "Nestor" });
+
+                //Error de muestra, donde solo se ve en ejecucion
+                //string objPersona = (string)objAlmacenaObjetoNormal2.getElemento(1);
+                Modelo.Persona objPersona = (Modelo.Persona)objAlmacenaObjetoNormal2.getElemento(1);
+                MessageBox.Show(objPersona.Identificación + " " + objPersona.Nombre);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
     }
 }

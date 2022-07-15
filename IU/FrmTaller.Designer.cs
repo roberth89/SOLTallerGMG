@@ -50,6 +50,7 @@
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblIdentificacion = new System.Windows.Forms.Label();
             this.btnGeneric = new System.Windows.Forms.Button();
+            this.btnGenerico = new System.Windows.Forms.Button();
             this.GPBXPractica.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -256,15 +257,26 @@
             this.btnGeneric.Name = "btnGeneric";
             this.btnGeneric.Size = new System.Drawing.Size(120, 23);
             this.btnGeneric.TabIndex = 12;
-            this.btnGeneric.Text = "Ejemplo Generic";
+            this.btnGeneric.Text = "Ejemplo Object";
             this.btnGeneric.UseVisualStyleBackColor = true;
             this.btnGeneric.Click += new System.EventHandler(this.btnGeneric_Click);
+            // 
+            // btnGenerico
+            // 
+            this.btnGenerico.Location = new System.Drawing.Point(437, 222);
+            this.btnGenerico.Name = "btnGenerico";
+            this.btnGenerico.Size = new System.Drawing.Size(120, 23);
+            this.btnGenerico.TabIndex = 13;
+            this.btnGenerico.Text = "Ejemplo Generic";
+            this.btnGenerico.UseVisualStyleBackColor = true;
+            this.btnGenerico.Click += new System.EventHandler(this.btnGenerico_Click);
             // 
             // FrmTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 567);
+            this.Controls.Add(this.btnGenerico);
             this.Controls.Add(this.btnGeneric);
             this.Controls.Add(this.GPBXPractica);
             this.Controls.Add(this.TxtResultadoList);
@@ -309,5 +321,6 @@
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblIdentificacion;
         private System.Windows.Forms.Button btnGeneric;
+        private System.Windows.Forms.Button btnGenerico;
     }
 }

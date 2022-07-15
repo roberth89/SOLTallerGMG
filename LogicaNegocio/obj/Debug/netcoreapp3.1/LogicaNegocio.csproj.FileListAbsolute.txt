@@ -16,11 +16,10 @@ F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\bin\Debug\netcoreapp3.1\Lo
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\bin\Debug\netcoreapp3.1\LogicaNegocio.pdb
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\bin\Debug\netcoreapp3.1\Modelo.dll
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\bin\Debug\netcoreapp3.1\Modelo.pdb
-F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\obj\Debug\netcoreapp3.1\LogicaNegocio.csproj.AssemblyReference.cache
-F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\obj\Debug\netcoreapp3.1\LogicaNegocio.GeneratedMSBuildEditorConfig.editorconfig
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\obj\Debug\netcoreapp3.1\LogicaNegocio.AssemblyInfoInputs.cache
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\obj\Debug\netcoreapp3.1\LogicaNegocio.AssemblyInfo.cs
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\obj\Debug\netcoreapp3.1\LogicaNegocio.csproj.CoreCompileInputs.cache
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\obj\Debug\netcoreapp3.1\LogicaNegocio.csproj.CopyComplete
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\obj\Debug\netcoreapp3.1\LogicaNegocio.dll
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\obj\Debug\netcoreapp3.1\LogicaNegocio.pdb
+F:\TallerGrupoMonge\TallerGrupoMongeUNI\LogicaNegocio\obj\Debug\netcoreapp3.1\LogicaNegocio.csprojAssemblyReference.cache
