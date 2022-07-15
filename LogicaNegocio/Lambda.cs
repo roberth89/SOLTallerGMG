@@ -49,7 +49,7 @@ namespace LogicaNegocio
             // Podriamos crear una clase estatica que tengas todas estas funcionalidades.
         }
 
-        // Validar si explico este.
+        // Validar si explico este, ya que lleva delegados.
         public void test()
         {
             var colas = LogicaNegocio.Lista.Colas().ToList();
