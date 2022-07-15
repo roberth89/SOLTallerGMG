@@ -16,6 +16,7 @@ namespace Modelo
         public DateTime FechaTransaccion { get; set; }
         public decimal MontoTransaccion { get; set; }
         public string Mensaje { get; set; }
+        public int Edad { get; set; }
 
     }
 }

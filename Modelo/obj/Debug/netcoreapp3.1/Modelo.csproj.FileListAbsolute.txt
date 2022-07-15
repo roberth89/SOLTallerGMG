@@ -16,3 +16,4 @@ F:\TallerGrupoMonge\TallerGrupoMongeUNI\Modelo\obj\Debug\netcoreapp3.1\Modelo.As
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\Modelo\obj\Debug\netcoreapp3.1\Modelo.csproj.CoreCompileInputs.cache
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\Modelo\obj\Debug\netcoreapp3.1\Modelo.dll
 F:\TallerGrupoMonge\TallerGrupoMongeUNI\Modelo\obj\Debug\netcoreapp3.1\Modelo.pdb
+F:\TallerGrupoMonge\TallerGrupoMongeUNI\Modelo\obj\Debug\netcoreapp3.1\Modelo.csprojAssemblyReference.cache
